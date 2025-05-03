@@ -1,6 +1,5 @@
 import streamlit as st
 
-# 🎒 Define your Transport class
 class Transport:
     def __init__(self, name, route, fare, timings):
         self.name = name
@@ -15,7 +14,7 @@ class Transport:
         st.write(f"⏰ Timings: {self.timings}")
         st.markdown("---")
 
-# 🚍 Create transport options
+
 transports = [
     Transport("People Bus Route 1", "Khokrapar to Dockyard", 50, "6:00 AM - 10:00 PM"),
     Transport("People Bus Route 2", "Power House to Indus Hospital", 50, "7:00 AM - 8:00 PM"),
@@ -39,10 +38,9 @@ transports = [
     Transport("Mini Bus Sheraz Coach", "Picadilly to Hawskbay", 0, "7:00 AM - 8:00 PM"),
 ]
 
-# 🖼️ App Layout
+
 st.title("🚍 Public Transport Finder")
 
-# 🆕 Dropdown instead of text input
 transport_names = [t.name for t in transports]
 selected = st.selectbox("Select a transport:", ["Select Transport"] + transport_names)
 
